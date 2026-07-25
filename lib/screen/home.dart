@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../custom_widget/Search_Product.dart';
+import '../custom_widget/bottomNavigationbar.dart';
 import '../data/product_list.dart';
 
 import '../custom_widget/Selling_Card.dart';
@@ -47,33 +49,7 @@ class home extends StatelessWidget {
               ),
 
               /// Search Bar
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextFormField(
-                  decoration: InputDecoration(
-                    hintText: 'Search for fresh fruits and groceries',
-                    hintStyle: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 12,
-                    ),
-                    prefixIcon: const Icon(Icons.manage_search, size: 20),
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(
-                        color: Colors.grey,
-                        width: 1,
-                      ),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(
-                        color: Colors.black,
-                        width: 1,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+              Search_Product(),
 
               /// Offer Banner
               Padding(
@@ -317,20 +293,10 @@ class home extends StatelessWidget {
 
       ),
 
-
-      bottomNavigationBar: Row(
-        children: [
-          Container(
-            width: 300,
-            height: 80,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              color: Colors.pink,
-            ),
-          ),
-        ],
-      ),
-
+        bottomNavigationBar: bottomNavigationbar()
     );
   }
 }
+
+
+

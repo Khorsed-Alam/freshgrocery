@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshgrocery/screen/Explore_Product.dart';
 import 'package:freshgrocery/screen/home.dart';
 
 class myApp extends StatelessWidget {
@@ -15,6 +16,7 @@ class myApp extends StatelessWidget {
 
       routes: {
         '/':(context)=>home(),
+
     }
       ,
 
