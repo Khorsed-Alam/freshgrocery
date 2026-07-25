@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:freshgrocery/screen/Explore_Product.dart';
 import 'package:freshgrocery/screen/home.dart';
+import 'package:freshgrocery/screen/product_details.dart';
 
 class myApp extends StatelessWidget {
   const myApp({super.key});
@@ -15,7 +16,11 @@ class myApp extends StatelessWidget {
       initialRoute: '/',
 
       routes: {
-        '/':(context)=>home(),
+        //'/':(context)=>home(),
+
+
+         '/':(context)=>product_details(),
+
 
     }
       ,

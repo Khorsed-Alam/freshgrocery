@@ -13,40 +13,35 @@ class ExploreProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.pink,
+        title: Row(
+          children: [
+
+            const Text(
+              "New York USA",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
+
+            const Spacer(), // Dynamically pushes the cart icon to the far right
+
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.shopping_cart, size: 20),
+            ),
+          ],
+        ) ,
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             
             children: [
-              // Top App Bar / Header
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
 
-                    },
-                    icon: const Icon(Icons.keyboard_arrow_left, size: 20),
-                  ),
-                  const SizedBox(width: 8),
-          
-                  const Text(
-                    "New York USA",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                    ),
-                  ),
-          
-                  const Spacer(), // Dynamically pushes the cart icon to the far right
-          
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.shopping_cart, size: 20),
-                  ),
-                ],
-              ),
           
               // Banner Section
               Padding(

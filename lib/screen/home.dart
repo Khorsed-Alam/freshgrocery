@@ -12,41 +12,42 @@ class home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.pink,
+        title:   Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+
+            const Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Location",
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+                Text(
+                  "New York, USA",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+
+            IconButton(
+              onPressed: () {},
+              icon: const Icon(Icons.shopping_cart, size: 20, color: Colors.white,),
+            ),
+          ],
+        ),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.menu, size: 20),
-                  ),
-                  const SizedBox(width: 8),
-                  const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Location",
-                        style: TextStyle(color: Colors.grey, fontSize: 12),
-                      ),
-                      Text(
-                        "New York, USA",
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(width: 190),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.shopping_cart, size: 20),
-                  ),
-                ],
-              ),
+
 
               /// Search Bar
               Search_Product(),
