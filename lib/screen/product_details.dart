@@ -91,7 +91,17 @@ class product_details extends StatelessWidget {
 
                  decoration: BoxDecoration(
                    borderRadius: BorderRadius.circular(10),
-                   color: Colors.white,
+                   color: Colors.transparent,
+
+                   boxShadow: [
+                     BoxShadow(
+                       color: Colors.black.withOpacity(0.01),
+                       blurRadius: 10,
+                       spreadRadius: 2,
+                       offset: const Offset(0, 4),
+                     )
+                   ]
+
                  ),
 
                  child: Row(
@@ -123,7 +133,7 @@ class product_details extends StatelessWidget {
 
                  Container(
                      decoration: BoxDecoration(
-                       color: Colors.grey.shade100,
+                       color: Colors.transparent,
                        shape: BoxShape.circle,
                      ),
                      child: IconButton(
@@ -144,8 +154,187 @@ class product_details extends StatelessWidget {
 
 
                ])
-               )],
-            ),
+               ),
+                Container(
+                  height: 150,
+                  width:320,
+
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                  ),
+                  child: Column(
+
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          height: 70,
+                          width: 220,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.white70,
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black12,
+                                blurRadius: 10,
+                                spreadRadius: 2,
+                                offset: const Offset(0, 4),
+                              )
+                            ]
+                          ),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              IconButton(onPressed: (){}, icon:Icon(Icons.remove)),
+                              Text("1",style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              )),
+                              IconButton(onPressed: (){}, icon:Icon(Icons.add)),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 50,
+                        width: 280,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.brown,
+                      ),
+
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.shopping_cart,color: Colors.white,size: 20,),
+                              SizedBox(width: 5,),
+                              Text("Add to Cart",style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),)
+                            ],
+                          ),
+                        ),
+
+
+
+
+                      )
+
+                    ],
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                          height: 100,
+                          width: 150,
+
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 10,
+                                  spreadRadius: 2,
+                                  offset: const Offset(0, 4),
+                                )
+                              ]
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Variety",style: TextStyle(
+                                  fontSize: 15,
+                                ),),
+                                Text("Heritage \nRuby", style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),)
+
+                              ],
+                            ),
+                          )
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Container(
+                          height: 100,
+                          width: 150,
+
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 10,
+                                  spreadRadius: 2,
+                                  offset: const Offset(0, 4),
+                                )
+                              ]
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text("Variety",style: TextStyle(
+                                  fontSize: 15,
+                                ),),
+                                Text("Heritage \nRuby", style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),)
+
+                              ],
+                            ),
+                          )
+                      ),
+                    ],
+                  ),
+                ),
+
+                Padding(
+                  padding: EdgeInsets.only(left: 20,),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text("Description",style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 19,
+                    ),),
+
+                  ),
+
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text("The Ruby Obsidian is a rare hybrid variety cultivated in the volcanic-rich soils of the Pacific Northwest. Characterized by its deep, almost mystical red skin and remarkably white flesh, it offers a sophisticated balance of tartness and sugar. Each bite delivers an audible snap, making it the premier choice for both fresh consumption and high-end culinary presentations.",style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.black,
+                  ),),
+                ),
+
+
+
+
+
+              ],
+                ),
           ),
         ),
       ),
