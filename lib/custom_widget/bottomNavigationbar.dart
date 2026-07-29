@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshgrocery/screen/cart.dart';
 import 'package:freshgrocery/screen/product_details.dart';
 
 import '../screen/Explore_Product.dart';
@@ -70,7 +71,7 @@ class bottomNavigationbar extends StatelessWidget {
           // 3. Cart Button
           ElevatedButton(
             onPressed: () {
-             Navigator.push(context, MaterialPageRoute(builder: (context)=>product_details()));
+             Navigator.push(context, MaterialPageRoute(builder: (context)=>cart()));
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.transparent,

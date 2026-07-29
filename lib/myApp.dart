@@ -17,15 +17,15 @@ class myApp extends StatelessWidget {
       initialRoute: '/',
 
       routes: {
-        //'/':(context)=>home(),
+        '/':(context)=>home(),
 
 
-       // '/':(context)=>product_details(),
-        '/':(context)=>cart(),
+       // // '/':(context)=>product_details(),
+       //  '/':(context)=>cart(),
 
 
     }
-      ,
+
 
     );
   }

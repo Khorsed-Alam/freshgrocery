@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshgrocery/screen/product_details.dart';
 import '../custom_widget/Search_Product.dart';
 import '../custom_widget/bottomNavigationbar.dart';
 import '../data/product_list.dart';
@@ -278,12 +279,17 @@ class home extends StatelessWidget {
                   childAspectRatio: 0.65,
                 ),
                 itemBuilder: (context, index) {
-                  return Selling_Card(
-                    image: products[index]["image"],
-                    name: products[index]["name"],
-                    type: products[index]["type"],
-                    weight: products[index]["weight"],
-                    price: products[index]["price"],
+                  return InkWell(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>product_details()));
+                    },
+                    child: Selling_Card(
+                      image: products[index]["image"],
+                      name: products[index]["name"],
+                      type: products[index]["type"],
+                      weight: products[index]["weight"],
+                      price: products[index]["price"],
+                    ),
                   );
                 },
               ),

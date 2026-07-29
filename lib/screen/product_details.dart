@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:freshgrocery/screen/cart.dart';
 
 import '../custom_widget/bottomNavigationbar.dart';
 
@@ -196,33 +197,38 @@ class product_details extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        height: 50,
-                        width: 280,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.brown,
-                      ),
-
-                        child: Align(
-                          alignment: Alignment.center,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.shopping_cart,color: Colors.white,size: 20,),
-                              SizedBox(width: 5,),
-                              Text("Add to Cart",style: TextStyle(
-                                fontSize: 15,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),)
-                            ],
-                          ),
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>cart()));
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 280,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Colors.brown,
                         ),
 
+                          child: Align(
+                            alignment: Alignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.shopping_cart,color: Colors.white,size: 20,),
+                                SizedBox(width: 5,),
+                                Text("Add to Cart",style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),)
+                              ],
+                            ),
+                          ),
 
 
 
+
+                        ),
                       )
 
                     ],
